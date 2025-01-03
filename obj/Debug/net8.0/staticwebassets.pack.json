@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/hannahburks/Documents/Northcoders/PDT/Csharp-manifestation-api/Manifestify/ManifestifyBlazorApp/obj/Debug/net8.0/scopedcss/projectbundle/ManifestifyBlazorApp.bundle.scp.css",
+      "PackagePath": "staticwebassets/ManifestifyBlazorApp.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/hannahburks/Documents/Northcoders/PDT/Csharp-manifestation-api/Manifestify/ManifestifyBlazorApp/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/hannahburks/Documents/Northcoders/PDT/Csharp-manifestation-api/Manifestify/ManifestifyBlazorApp/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/hannahburks/Documents/Northcoders/PDT/Csharp-manifestation-api/Manifestify/ManifestifyBlazorApp/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/hannahburks/Documents/Northcoders/PDT/Csharp-manifestation-api/Manifestify/ManifestifyBlazorApp/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ManifestifyBlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ManifestifyBlazorApp.props",
+      "PackagePath": "build\\ManifestifyBlazorApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ManifestifyBlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\ManifestifyBlazorApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ManifestifyBlazorApp.props",
+      "PackagePath": "buildTransitive\\ManifestifyBlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

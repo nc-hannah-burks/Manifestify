@@ -1,0 +1,22 @@
+﻿@page "/"
+<PageTitle>Home</PageTitle>
+
+<h1>Login</h1>
+
+@if (!loggedIn)
+{
+    <form method="post" @onsubmit="Submit" @formname="starshipForm">
+    <AntiforgeryToken />
+    <label>Email</label>
+    <input id="email" type="text" value="" />
+    <label>Password</label>
+    <input id="password" type="password" value="" />
+</form>
+}
+
+
+@code{
+    private bool submitted = false;
+    private bool loggedIn = false;
+    private void Submit() => submitted = true;
+}

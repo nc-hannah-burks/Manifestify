@@ -3,20 +3,25 @@
 
 <h1>Login</h1>
 
-@if (!loggedIn)
+@if (!loggedIn && signedUp)
 {
-    <form method="post" @onsubmit="Submit" @formname="starshipForm">
-    <AntiforgeryToken />
-    <label>Email</label>
-    <input id="email" type="text" value="" />
-    <label>Password</label>
-    <input id="password" type="password" value="" />
-</form>
+    <form method="post" @onsubmit="Submit" @formname="starshipForm" style="width: 100%; max-width: 350px">
+        <AntiforgeryToken />
+        <label>Email</label>
+        <input id="email" type="text" value=""/>
+        <label>Password</label>
+        <input id="password" type="password" value=""/>
+        <input type="submit" class="btn btn-success" style="width:fit-content; margin-top:1%" >
+    </form>
+    <button class="btn btn-link" > Sign up </button>
+
 }
 
 
 @code{
     private bool submitted = false;
     private bool loggedIn = false;
+
+    private bool signedUp = true;
     private void Submit() => submitted = true;
 }

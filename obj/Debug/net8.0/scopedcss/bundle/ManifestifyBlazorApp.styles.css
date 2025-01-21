@@ -211,8 +211,39 @@ main[b-k4o0k1infl] {
 form[b-x5h4lzsa3v] {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
-input[b-x5h4lzsa3v] {
-  width: 100%;
+
+.btn[b-x5h4lzsa3v] {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.btn-link[b-x5h4lzsa3v] {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.btn-link:hover[b-x5h4lzsa3v] {
+  background-color: #555555;
+  color: white;
+}
+
+.btn-success[b-x5h4lzsa3v] {
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04aa6d;
+}
+
+.btn-success:hover[b-x5h4lzsa3v] {
+  background-color: #04aa6d;
+  color: white;
 }

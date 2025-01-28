@@ -3,6 +3,11 @@ form[b-x5h4lzsa3v] {
   flex-direction: column;
 }
 
+.button-input-container[b-x5h4lzsa3v] {
+  display: flex;
+  flex-direction: row;
+}
+
 .btn[b-x5h4lzsa3v] {
   background-color: #04aa6d; /* Green */
   border: none;
@@ -38,7 +43,21 @@ form[b-x5h4lzsa3v] {
   color: white;
 }
 
-.button-container[b-x5h4lzsa3v] {
+.form-input-container[b-x5h4lzsa3v] {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-bottom: 16px; /* Space between each input section */
+}
+
+label[b-x5h4lzsa3v] {
+  font-weight: bold;
+  margin-bottom: 8px; /* Space between label and input */
+}
+
+.input-text[b-x5h4lzsa3v] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px; /* Adds spacing after the input */
 }

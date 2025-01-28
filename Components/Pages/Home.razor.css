@@ -3,6 +3,11 @@ form {
   flex-direction: column;
 }
 
+.button-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .btn {
   background-color: #04aa6d; /* Green */
   border: none;
@@ -38,7 +43,21 @@ form {
   color: white;
 }
 
-.button-container {
+.form-input-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-bottom: 16px; /* Space between each input section */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px; /* Space between label and input */
+}
+
+.input-text {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px; /* Adds spacing after the input */
 }

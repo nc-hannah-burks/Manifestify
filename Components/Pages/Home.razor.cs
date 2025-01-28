@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ManifestifyBlazorApp;
 
-public class Login
+public class LoginModel
 {
     [Required(ErrorMessage = "The email address is required")]
     [EmailAddress(ErrorMessage = "Invalid Email Address")]

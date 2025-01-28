@@ -1,36 +1,48 @@
 ﻿@page "/"
-@inject HttpClient httpClient
+@* @inject HttpClient httpClient *@
 <PageTitle>Home</PageTitle>
 <h1>Login</h1>
 
 @if (!loggedIn && signedUp)
 {
-    <form method="post" @onsubmit="Submit" @formname="Login" style="width: 100%; max-width: 350px">
-        <AntiforgeryToken />
-        <label>Email</label>
-        <input id="email" type="text" value=""/>
-        <label>Password</label>
-       
-        <input id="password" type="password" value=""/>
-         <div class="button-container">
-        <input type="submit" class="btn btn-success" style="width:fit-content; margin-top:1%" >
-        <button class="btn btn-link" > Sign up </button>
+    <EditForm Model="loginForm" OnValidSubmit="HandleValidSubmit" style="width: 100%; max-width: 350px">  @* Edit form is a form specific to Blazor *@
+        <DataAnnotationsValidator />            @* Enables validation using data annotations. *@
+        <ValidationSummary />     @* Displays a list of validation errors. *@
+  
+        
+        <div class="form-input-container">
+            <label for="email">
+                Email: 
+                <InputText id="email" class="input-text" @bind-Value="loginForm.Email" />
+            </label>
+            <ValidationMessage For="@(() => loginForm.Email)" />  @* Displays validation messages for Email *@
         </div>
-    </form>
-   
-   
-
+        
+        <div class="form-input-container">
+            <label for="password">
+                Password: 
+                <InputText id="password" class="input-text" @bind-Value="loginForm.Password" />
+            </label>
+            <ValidationMessage For="@(() => loginForm.Password)" />  @* Displays validation messages for Password *@
+        </div>
+        
+        <div class="button-input-container">
+            <button type="submit" class="btn btn-success" style="width:fit-content; margin-top:1%" >Login</button>
+            <button class="btn btn-link"> Sign up </button>
+        </div>
+    </EditForm>
 }
-
 
 @code{
-    private bool submitted = false;
     private bool loggedIn = false;
-
     private bool signedUp = true;
     
-    [SupplyParameterFromForm]
-    private Login? Model { get; set; }
-    private void Submit() => submitted = true;
-}
+    private LoginModel loginForm = new LoginModel();  // Creates an instance of LoginModel to bind to the form
 
+    private void HandleValidSubmit()
+    {
+        // Handle valid form submission (for example, send data to an API)
+        Console.WriteLine("Form Submitted with Email: " + loginForm.Email);
+        // Reset the form or do further processing as needed
+    }
+}

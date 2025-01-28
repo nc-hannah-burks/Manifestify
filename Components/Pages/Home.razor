@@ -1,19 +1,24 @@
 ﻿@page "/"
+@inject HttpClient httpClient
 <PageTitle>Home</PageTitle>
-
 <h1>Login</h1>
 
 @if (!loggedIn && signedUp)
 {
-    <form method="post" @onsubmit="Submit" @formname="starshipForm" style="width: 100%; max-width: 350px">
+    <form method="post" @onsubmit="Submit" @formname="Login" style="width: 100%; max-width: 350px">
         <AntiforgeryToken />
         <label>Email</label>
         <input id="email" type="text" value=""/>
         <label>Password</label>
+       
         <input id="password" type="password" value=""/>
+         <div class="button-container">
         <input type="submit" class="btn btn-success" style="width:fit-content; margin-top:1%" >
+        <button class="btn btn-link" > Sign up </button>
+        </div>
     </form>
-    <button class="btn btn-link" > Sign up </button>
+   
+   
 
 }
 
@@ -23,5 +28,9 @@
     private bool loggedIn = false;
 
     private bool signedUp = true;
+    
+    [SupplyParameterFromForm]
+    private Login? Model { get; set; }
     private void Submit() => submitted = true;
 }
+

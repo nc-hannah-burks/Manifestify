@@ -1,0 +1,27 @@
+@page "/sign-up"
+<PageTitle>Sign up</PageTitle>
+<h1>Sign up</h1>
+
+
+<form method="post" @onsubmit="Submit" @formname="signup" style="width: 100%; max-width: 350px">
+        <AntiforgeryToken />
+        <label>First name</label>
+        <input id="forename" type="text" value=""/>
+        <label>Surname</label>
+        <input id="surname" type="text" value=""/>
+        <label>Email</label>
+        <input id="email" type="text" value=""/>
+        <label>Password</label>
+        <input id="password" type="password" value=""/>
+         <div class="button-container">
+        <input type="submit" class="btn btn-success" style="width:fit-content; margin-top:1%" >
+        </div>
+    </form>
+
+@code{
+    private bool submitted = false;
+    private bool loggedIn = false;
+
+    private bool signedUp = true;
+    private void Submit() => submitted = true;
+}

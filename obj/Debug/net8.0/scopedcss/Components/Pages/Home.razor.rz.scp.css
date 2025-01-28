@@ -37,3 +37,8 @@ form[b-x5h4lzsa3v] {
   background-color: #04aa6d;
   color: white;
 }
+
+.button-container[b-x5h4lzsa3v] {
+  display: flex;
+  flex-direction: row;
+}
